@@ -8,7 +8,7 @@ const NewCollections = () => {
 const [new_collection,setNew_collection] = useState([]);
 
 useEffect(()=>{
-  fetch('http://trendywear-backend-o4qr.onrender.com/newcollections')
+  fetch('https://trendywear-backend-o4qr.onrender.com/newcollections')
   .then((response)=>response.json())
   .then((data)=>setNew_collection(data));
 },[])

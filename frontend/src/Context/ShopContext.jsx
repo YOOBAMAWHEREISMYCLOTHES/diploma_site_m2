@@ -15,13 +15,13 @@ const ShopContextProvider = (props)=>{
     const [cartItems,setCartItems] = useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('http://trendywear-backend-o4qr.onrender.com/allproducts')
+        fetch('https://trendywear-backend-o4qr.onrender.com/allproducts')
         .then((response)=>response.json())
         .then((data)=>setAll_Product(data))
 
         // auth token is available loged in and start data will be fetch and save it in Shop context
         if(localStorage.getItem('auth-token')){
-            fetch('http://trendywear-backend-o4qr.onrender.com/getcart',{
+            fetch('https://trendywear-backend-o4qr.onrender.com/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'appilcation/form-data',
@@ -37,7 +37,7 @@ const ShopContextProvider = (props)=>{
     const addToCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
         if(localStorage.getItem('auth-token')){
-            fetch('http://trendywear-backend-o4qr.onrender.com/addtocart',{
+            fetch('https://trendywear-backend-o4qr.onrender.com/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -54,7 +54,7 @@ const ShopContextProvider = (props)=>{
     const removeFromCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('http://trendywear-backend-o4qr.onrender.com/removefromcart',{
+            fetch('https://trendywear-backend-o4qr.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
