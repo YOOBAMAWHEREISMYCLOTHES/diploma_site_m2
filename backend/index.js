@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const { v2: cloudinary } = require("cloudinary");
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const { CloudinaryStorage } = require('@fluidjs/multer-cloudinary');
 const cors = require("cors");
 
 app.use(express.json());
