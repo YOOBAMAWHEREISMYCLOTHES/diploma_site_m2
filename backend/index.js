@@ -4,7 +4,8 @@ const app = express();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
-const path = require("path");
+const { v2: cloudinary } = require("cloudinary");
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const cors = require("cors");
 
 app.use(express.json());
@@ -13,32 +14,37 @@ app.use(cors());
 // Database Connection With MongoDB
 mongoose.connect("mongodb+srv://bohdandovhyi:Abazhur17712.@cluster0.cxt34.mongodb.net/e-commerce");
 
+// Cloudinary Configuration
+cloudinary.config({
+    cloud_name: "dgnhbaxzg", // Замініть на своє ім'я Cloudinary
+    api_key: "288363273421953",       // Замініть на ваш API Key
+    api_secret: "tVdSabQwwRVTGnqUH3bMOdv2Hcs"  // Замініть на ваш API Secret
+});
+
+// Multer Cloudinary Storage
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: "products",       // Папка у Cloudinary, куди зберігатимуться фото
+        allowed_formats: ["jpg", "png", "jpeg"],
+    },
+});
+
+const upload = multer({ storage });
+
 // API Creation
 
 app.get("/",(req,res)=>{
     res.send("Express App is running")
 })
 
-// Image Storage Engine
-
-const storage = multer.diskStorage({
-    destination: './upload/images',
-    filename:(req,file,cb)=>{
-        return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-    }
-})
-
-const upload = multer({storage:storage})
-
-// Creating Upload endpoint for images
-app.use('/images', express.static('upload/images'))
-
-app.post('/upload', upload.single('product'),(req,res)=>{
+// Creating Upload Endpoint for Images
+app.post('/upload', upload.single('product'), (req, res) => {
     res.json({
-        success:1,
-        image_url:`${req.protocol}://${req.get('host')}/images/${req.file.filename}`
-    })
-})
+        success: 1,
+        image_url: req.file.path, // Cloudinary автоматично повертає URL завантаженого фото
+    });
+});
 
 // Schema for Creating Products
 
