@@ -1,0 +1,20 @@
+/* LogoSlider.css */
+.logo-slider {
+    margin: auto;
+    width: 75%;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  
+  .logo-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Висота слайдера */
+  }
+  
+  .logo-slide img {
+    max-width: 100px; /* Максимальна ширина логотипів */
+    max-height: 80px; /* Максимальна висота логотипів */
+    object-fit: contain;
+  }

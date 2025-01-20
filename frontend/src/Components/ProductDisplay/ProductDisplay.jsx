@@ -34,7 +34,7 @@ const ProductDisplay = (props) => {
             <div className="productdisplay-right-price-old">₴{product.old_price}</div>
             <div className='productdisplay-right-price-new'>₴{product.new_price}</div>
         </div>
-        <div className="productdisplay-right-description">Структуровані вишукані панелі, що підкреслюють ефектну вечірку, найкраще оздоблення спини, силует олівця, ідеальний вигляд. Деталі банта металеві люверси шкіряна підкладка розкішна обробка класичних судів. Урочиста кепка з квадратним носком і контрастним кольором.
+        <div className="productdisplay-right-description">Відкрийте для себе стиль, який гармонійно поєднує комфорт і елегантність! Наш одяг створений, щоб підкреслити вашу унікальність і подарувати впевненість у кожному русі. Завдяки високоякісним матеріалам і сучасному дизайну, ви завжди будете виглядати бездоганно — будь то на прогулянці, у офісі чи на святковій події. Створіть свій ідеальний образ із нашою колекцією
  
             </div>
             <div className="productdisplay-right-size">
@@ -48,7 +48,7 @@ const ProductDisplay = (props) => {
                 </div>
             </div>
             <button onClick={()=>{addToCart(product.id)}}>ДО КОШИКА</button>
-            <p className='productdisplay-right-category'><span>Категорія :</span> Жіночий, футболка, з вирізом.</p>
+            <p className='productdisplay-right-category'><span>Категорія :</span> Кофта</p>
             <p className='productdisplay-right-category'><span>Теги :</span> Сучаний, останній</p>
 
       </div>

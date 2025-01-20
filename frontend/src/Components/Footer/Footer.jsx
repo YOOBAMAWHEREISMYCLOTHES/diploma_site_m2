@@ -7,34 +7,37 @@ import whatsapp_icon from '../Assets/whatsapp_icon.png';
 
 const Footer = () => {
   return (
-    <div className='footer'>
-        <div className="footer-logo">
-            <img src={footer_logo} alt="" />
-            <p>TrendyWear</p>
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-about">
+            <h1 className="footer-logo">TrendyWear</h1>
+            <p className="footer-description">
+              Наш магазин пропонує широкий асортимент товарів для всієї родини. Ми прагнемо зробити ваш шопінг простим, зручним і приємним, надаючи широкий вибір моделей для будь-якого сезону, події та настрою.
+            </p>
+          </div>
+          <div className="footer-links">
+            <div className="footer-column">
+              <h3 className="footer-column-title">Поширте нас!</h3>
+              <ul className="footer-list">
+                <li><button className="social-button facebook">Facebook</button></li>
+                <li><button className="social-button twitter">X.com</button></li>
+                <li><button className="social-button linkedin">LinkedIn</button></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h3 className="footer-column-title">Контакти</h3>
+              <ul className="footer-list">
+                <li>📍 Київ, Україна</li>
+                <li>✉️ trendywear@shop.com</li>
+                <li>📞 +380-99-123-4567</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      <ul className="footer-links">
-        <li>Бренди</li>
-        <li>Магазини</li>
-        <li>Про нас</li>
-        <li>Контакти</li>
-        <li>Умови</li>
-      </ul>
-      <div className="footer-social-icons">
-        <div className="footer-icons-container">
-            <img src={instagram_icon} alt="" />
+        <div className="footer-bottom">
+          <p>Copyright © 2025, developed by TrendyWear. All rights reserved.</p>
         </div>
-        <div className="footer-icons-container">
-            <img src={pintester_icon} alt="" />
-        </div>
-        <div className="footer-icons-container">
-            <img src={whatsapp_icon} alt="" />
-        </div>
-      </div>
-      <div className='footer-copyright'>
-        <hr />
-        <p>Copyright @ 2024 - Всі права захищено</p>
-      </div>
-    </div>
+      </footer>
   )
 }
 
