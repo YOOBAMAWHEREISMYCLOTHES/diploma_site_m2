@@ -17,6 +17,7 @@
     color: #454545;
     font-size: 55px;
     font-weight: 600;
+    text-align: center;
 }
 
 .newsletter p {
@@ -149,7 +150,7 @@
 @media(max-width:500px) {
     .newsletter {
         height: 25vh;
-        width: 100%;
+        width: 80%;
         padding: 0;
         gap: 15px;
     }

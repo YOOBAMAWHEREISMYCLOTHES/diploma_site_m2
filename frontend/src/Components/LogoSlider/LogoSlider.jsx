@@ -27,26 +27,6 @@ const LogoSlider = () => {
     cssEase: 'linear',
     arrows: false,
     pauseOnHover: false,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 4, // Менше слайдів для планшетів
-            },
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2, // Ще менше слайдів для мобільних
-            },
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1, // Один слайд для дуже малих екранів
-            },
-        },
-    ],
 };
 
 
