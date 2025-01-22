@@ -52,6 +52,10 @@
     gap: 45px;
 }
 
+.nav-login-cart img {
+    width: 40px;
+}
+
 .nav-login-cart button {
     width: 157px;
     height: 58px;
@@ -162,11 +166,13 @@
     .nav-menu {
         display: none;
         height: 80px;
-        width: 100%;
+        width: 95%;
         position: absolute;
         background: #A8D5E3;
         justify-content: center;
         top: 50px;
+        color: #171717;
+        text-decoration: none;
     }
     
     .nav-menu-visible {
@@ -191,6 +197,7 @@
     .nav-menu {
         height: 70px;
         top: 50px;
+        width: 90%;
     }
 
     .nav-login-cart {

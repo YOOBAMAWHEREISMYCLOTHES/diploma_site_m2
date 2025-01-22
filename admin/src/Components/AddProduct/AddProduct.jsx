@@ -57,25 +57,25 @@ const AddProduct = () => {
   return (
     <div className='add-product'>
       <div className="addproduct-itemfield">
-        <p>Product title</p>
-            <input value={productDetails.name} onChange={changeHandler} type="text" name='name' placeholder='Type here' />
+        <p>Назва товару</p>
+            <input value={productDetails.name} onChange={changeHandler} type="text" name='name' placeholder='Введіть тут' />
         </div>
         <div className="addproduct-price">
         <div className="addproduct-itemfield">
-            <p>Price</p>
-            <input value={productDetails.old_price} onChange={changeHandler} type="text" name='old_price' placeholder='Type here' />
+            <p>Ціна</p>
+            <input value={productDetails.old_price} onChange={changeHandler} type="text" name='old_price' placeholder='Введіть тут' />
         </div>
             <div className="addproduct-itemfield">
-            <p>Offer Price</p>
-            <input value={productDetails.new_price} onChange={changeHandler} type="text" name='new_price' placeholder='Type here' />
+            <p>Остаточна ціна</p>
+            <input value={productDetails.new_price} onChange={changeHandler} type="text" name='new_price' placeholder='Введіть тут' />
             </div>
         </div>
         <div className="addproduct-itemfield">
-        <p>Product Category</p>
+        <p>Категорія</p>
         <select value={productDetails.category} onChange={changeHandler} name="category" className='add-product-selector'>
-            <option value="women">Women</option>
-            <option value="men">Men</option>
-            <option value="kid">Kid</option>
+            <option value="women">Жінки</option>
+            <option value="men">Чоловіки</option>
+            <option value="kid">Діти</option>
         </select>
     </div>
     <div className="addproduct-itemfield">
@@ -84,7 +84,7 @@ const AddProduct = () => {
         </label>
         <input onChange={imageHandler} type="file" name='image' id='file-input' hidden/>
     </div>
-    <button onClick={()=>{Add_Product()}} className='addproduct-btn'>ADD</button>
+    <button onClick={()=>{Add_Product()}} className='addproduct-btn'>Додати</button>
     </div>
   )
 }

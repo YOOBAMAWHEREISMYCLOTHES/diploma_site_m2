@@ -37,16 +37,6 @@ const ProductDisplay = (props) => {
         <div className="productdisplay-right-description">Відкрийте для себе стиль, який гармонійно поєднує комфорт і елегантність! Наш одяг створений, щоб підкреслити вашу унікальність і подарувати впевненість у кожному русі. Завдяки високоякісним матеріалам і сучасному дизайну, ви завжди будете виглядати бездоганно — будь то на прогулянці, у офісі чи на святковій події. Створіть свій ідеальний образ із нашою колекцією
  
             </div>
-            <div className="productdisplay-right-size">
-                <h1>Обрати розмір</h1>
-                <div className="productdisplay-right-sizes">
-                    <div>S</div>
-                    <div>M</div>
-                    <div>L</div>
-                    <div>Xl</div>
-                    <div>XXL</div>
-                </div>
-            </div>
             <button onClick={()=>{addToCart(product.id)}}>ДО КОШИКА</button>
             <p className='productdisplay-right-category'><span>Категорія :</span> Кофта</p>
             <p className='productdisplay-right-category'><span>Теги :</span> Сучаний, останній</p>

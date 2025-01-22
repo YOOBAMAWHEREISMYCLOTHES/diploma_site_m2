@@ -1,62 +1,98 @@
-.footer {
-    background-color: #c1a07b; /* Світло-коричневий фон */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+  .footer {
+    background: linear-gradient(0deg, #A8D5E3, #e1ffea22 80%);
     padding: 40px 20px;
-    color: #fff;
-    font-family: Arial, sans-serif;
   }
-  
+
   .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Центруємо блок на сторінці та додаємо більше простору по краях */
+    width: 80%;
   }
-  
+
+  .footer-maintitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-maintitle img {
+    width: 40px;
+    height: 40px;
+  }
+
   .footer-about {
     flex: 1;
   }
-  
+
   .footer-logo {
     font-size: 24px;
     font-weight: bold;
-    color: #3b2f26; /* Темно-коричневий */
+    color: black; /* Темно-коричневий */
   }
-  
+
   .footer-description {
     font-size: 16px;
     margin-top: 10px;
-    color: #eee;
+    color: black;
     line-height: 1.6;
   }
-  
+
   .footer-links {
     flex: 2;
     display: flex;
     justify-content: space-around;
   }
-  
+
   .footer-column {
     display: flex;
     flex-direction: column;
   }
-  
+
   .footer-column-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
     color: #3b2f26;
   }
-  
+
   .footer-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .footer-list li {
     margin-bottom: 10px;
   }
-  
+
+  .footer-list li button {
+    background: none;
+    border: none;
+    color: #3b2f26;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    transition: color 0.3s ease;
+  }
+
+  .footer-list li button img {
+    size: 6px;
+  }
+
+  .footer-list li button:hover {
+    color: #4267B2;
+  }
+
   .social-button {
     background-color: #3b2f26;
     color: #fff;
@@ -66,37 +102,43 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
-  .social-button.facebook:hover {
-    background-color: #4267B2;
-  }
-  
-  .social-button.twitter:hover {
-    background-color: #1DA1F2;
-  }
-  
-  .social-button.linkedin:hover {
-    background-color: #0077B5;
-  }
-  
+
+  .social-icon {
+    width: 20px; /* Ширина іконки */
+    height: 20px; /* Висота іконки */
+    margin-right: 8px; /* Відступ між іконкою та текстом */
+    vertical-align: middle; /* Вирівнювання по вертикалі */
+}
+
   .footer-bottom {
     margin-top: 20px;
     text-align: center;
     font-size: 14px;
-    color: #eee;
   }
-  
+
+  .footer-bottom a{
+    color: #FF78AC;
+    transition: 0.2s ease-in-out;
+
+  }
+
+  .footer-bottom a:hover {
+    color: black;
+  }
+
   @media (max-width: 768px) {
     .footer-content {
       flex-direction: column;
       align-items: center;
       gap: 20px;
+      padding: 0 20px; /* Додаємо більше відступів на менших екранах */
     }
-  
+
     .footer-links {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      margin-left: 0;
+      width: 100%;
       gap: 20px;
     }
   }
-  

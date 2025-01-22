@@ -19,15 +19,36 @@ const logos = [
 const LogoSlider = () => {
   const settings = {
     infinite: true,
-    speed: 5000, // Швидкість прокрутки (у мс)
-    slidesToShow: 5, // Кількість видимих слайдів
+    speed: 5000,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0, // Неперервний рух
-    cssEase: 'linear', // Лінійна прокрутка
-    arrows: false, // Без стрілок
-    pauseOnHover: false, // Прокрутка не зупиняється при наведенні
-  };
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    arrows: false,
+    pauseOnHover: false,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4, // Менше слайдів для планшетів
+            },
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2, // Ще менше слайдів для мобільних
+            },
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1, // Один слайд для дуже малих екранів
+            },
+        },
+    ],
+};
+
 
   return (
     <div className="logo-slider">

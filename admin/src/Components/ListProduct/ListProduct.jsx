@@ -30,14 +30,14 @@ const ListProduct = () => {
 
   return (
     <div className='list-product'>
-      <h1>All Products List</h1>
+      <h1>Список всіх товарів</h1>
       <div className="listproduct-format-main">
-        <p>Products</p>
-        <p>Title</p>
-        <p>Old Price</p>
-        <p>New Price</p>
-        <p>Category</p>
-        <p>Remove</p>
+        <p>Товари</p>
+        <p>Назва</p>
+        <p>Стара ціна</p>
+        <p>Нова ціна</p>
+        <p>Категорія</p>
+        <p>Видалити</p>
       </div>
 
       <div className='listproducts-allproducts'>
@@ -47,8 +47,8 @@ const ListProduct = () => {
               <div key={index} className="listproduct-format-main listproduct-format">
               <img src={product.image} alt="" className='listproduct-product-icon'/>
               <p>{product.name}</p>
-              <p>${product.old_price}</p>
-              <p>${product.new_price}</p>
+              <p>₴{product.old_price}</p>
+              <p>₴{product.new_price}</p>
               <p>{product.category}</p>
               <img onClick={()=>{remove_product(product.id)}} className='listproduct-remove-icon' src={cross_icon} alt=""/>
             </div>

@@ -7,44 +7,44 @@ import "./Testimonials.css";
 const testimonials = [
   {
     id: 1,
-    name: "Anna Smith",
+    name: "Анна Сидорчук",
     review:
-      "Amazing clothing store! Great quality and the styles are so trendy. Definitely my favorite place to shop.",
+      "Чудовий магазин одягу! Висока якість та дуже стильні моделі. Мій улюблений магазин!",
     instagram: "https://www.instagram.com",
   },
   {
     id: 2,
-    name: "John Doe",
+    name: "Іван Ковальчук",
     review:
-      "Fast delivery and excellent service. The clothes fit perfectly and look just like in the photos!",
+      "Швидка доставка та відмінний сервіс. Одяг ідеально підійшов і виглядає точно, як на фото!",
     instagram: "https://www.instagram.com",
   },
   {
     id: 3,
-    name: "Maria Garcia",
+    name: "Марія Гриценко",
     review:
-      "I love the variety of options and the affordable prices. Will definitely recommend to my friends!",
+      "Дуже подобається різноманіття вибору та доступні ціни. Обов'язково порекомендую друзям!",
     instagram: "https://www.instagram.com",
   },
   {
     id: 4,
-    name: "James Brown",
+    name: "Олексій Бондаренко",
     review:
-      "Great customer service and top-notch quality. I’ve been a loyal customer for years!",
+      "Чудовий сервіс та відмінна якість. Я залишаюся вашим постійним клієнтом!",
     instagram: "https://www.instagram.com",
   },
   {
     id: 5,
-    name: "Emily Davis",
+    name: "Олена Петрів",
     review:
-      "The designs are unique and the material is excellent. Highly recommend this store!",
+      "Дизайни унікальні, а матеріал чудовий. Щиро рекомендую цей магазин!",
     instagram: "https://www.instagram.com",
   },
   {
     id: 6,
-    name: "Michael Wilson",
+    name: "Максим Шевченко",
     review:
-      "Fantastic experience! The clothes are stylish, comfortable, and durable. Love this brand!",
+      "Фантастичний досвід! Одяг стильний, зручний і довговічний. Обожнюю цей бренд!",
     instagram: "https://www.instagram.com",
   },
 ];
@@ -80,7 +80,7 @@ function Testimonials() {
 
   return (
     <div className="testimonials-container">
-      <h2 className="section-title">What Our Customers Say</h2>
+      <h2 className="section-title">Що кажуть наші клієнти</h2>
       <Slider {...settings}>
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimonial">

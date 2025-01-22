@@ -8,18 +8,11 @@
     background: white ;
     height: 80px;
  }
- 
- .nav-profile {
-    width: 75px;
- }
+
 
  @media(max-width:800px) {
     
    .nav-logo {
       width: 150px;
-   }
-   
-   .nav-profile{
-      width: 60px;
    }
  }

@@ -1,5 +1,5 @@
 .description-container {
-    width: 80%; /* Контейнер займає 80% ширини сторінки */
+    width: 75%; /* Контейнер займає 80% ширини сторінки */
     margin: 40px auto; /* Вирівнює по центру сторінки */
     padding: 20px;
     border: 2px solid #d3d3d3; /* Сіра рамка */
@@ -9,7 +9,6 @@
   }
   
   .description-content {
-    font-family: Arial, sans-serif;
     color: #333; /* Темний текст */
     line-height: 1.6;
   }

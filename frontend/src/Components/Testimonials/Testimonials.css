@@ -1,7 +1,7 @@
 .testimonials-container {
     width: 68%; /* Контейнер займає 70% ширини */
     margin: 0 auto; /* Центрування */
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
   }
   

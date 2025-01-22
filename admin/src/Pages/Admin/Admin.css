@@ -1,5 +1,7 @@
 .admin {
     display: flex;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 @media(max-width:800px) {
