@@ -86,7 +86,7 @@
 
 @media(max-width:500px) {
     .popular {
-        height: 50vh;
+        height: 80vh;
     }
 
     .popular-item {

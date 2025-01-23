@@ -39,7 +39,7 @@ const Navbar = () => {
             window.location.replace('/')}}>Вийти</button>
             :<Link to='/login'><button>Увійти</button></Link>
             }
-            <Link to='/cart'><img src={cart_icon} alt="" /></Link>
+            <Link to='/cart'><img className='cart_img' src={cart_icon} alt="" /></Link>
             <div className='nav-cart-count'>{getTotalCartItems()}</div>
         </div>
       
